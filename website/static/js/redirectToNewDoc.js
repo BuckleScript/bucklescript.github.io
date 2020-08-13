@@ -3,10 +3,10 @@
  */
 
 (function() {
-  var dontRedirect = [
-    'playground'
-  ]
   var specializedDocsRedirect = {
+    'playground': 'try',
+    'load-third-party-libraries': 'try',
+
     'what-why': 'docs/manual/latest/introduction',
     'new-project': 'docs/manual/latest/installation#new-project',
     'concept-overview': 'docs/manual/latest/introduction',
@@ -83,8 +83,8 @@
 
   if (path[1] === 'docs'
       && page != null
-      // && page !== 'installation' uncomment to test more easily
-      && dontRedirect.indexOf(page) === -1) {
+      // && page !== 'playground' //uncomment to test more easily
+      ) {
     if (specializedDocsRedirect[page] == null) {
       window.location = 'https://rescript-lang.org/docs/manual/latest/' + path[3]
     } else {
@@ -96,5 +96,7 @@
     } else {
       window.location = 'https://rescript-lang.org/blog/' + specializedBlogRedirect[blogPageFullPath]
     }
+  } else {
+      window.location = 'https://rescript-lang.org'
   }
 })();
