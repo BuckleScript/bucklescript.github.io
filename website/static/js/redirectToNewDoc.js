@@ -81,18 +81,27 @@
   var blogPageFullPath = path.slice(2).join('/')
   var page = path[path.length - 1];
 
+  var normalizePage = function(page) {
+    if (page.indexOf('.html') >= 0) {
+      return page.slice(0, page.indexOf('.html'))
+    } else {
+      return page
+    }
+  }
+
   if (path[1] === 'docs'
       && page != null
       // && page !== 'playground' //uncomment to test more easily
       ) {
+    var page = normalizePage(page)
     if (specializedDocsRedirect[page] == null) {
-      window.location = 'https://rescript-lang.org/docs/manual/latest/' + path[3]
+      window.location = 'https://rescript-lang.org/docs/manual/latest/' + page
     } else {
       window.location = 'https://rescript-lang.org/' + specializedDocsRedirect[page]
     }
   } else if (path[1] === 'blog' && blogPageFullPath != null) {
     if (specializedBlogRedirect[blogPageFullPath] == null) {
-      window.location = 'https://rescript-lang.org/blog/' + page
+      window.location = 'https://rescript-lang.org/blog/' + normalizePage(page)
     } else {
       window.location = 'https://rescript-lang.org/blog/' + specializedBlogRedirect[blogPageFullPath]
     }
