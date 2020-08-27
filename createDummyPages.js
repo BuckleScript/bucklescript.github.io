@@ -4,7 +4,7 @@ let childProcess = require('child_process')
 let blogPostBase = 'https://reasonml.org/blog'
 let rescriptBase = 'https://rescript-lang.org'
 let manualBase = `${rescriptBase}/docs/manual/latest`
-let apiBase = `${rescriptBase}/apis/latest`
+let apiBase = `${rescriptBase}/docs/manual/latest/api`
 
 let docLanguages = [
   'en',
@@ -67,8 +67,8 @@ let docPages = {
   'ecosystem/index.html': `${rescriptBase}/docs/manual/latest/libraries`,
   'embed-raw-javascript.html': `${rescriptBase}/docs/manual/latest/embed-raw-javascript`,
   'embed-raw-javascript/index.html': `${rescriptBase}/docs/manual/latest/embed-raw-javascript`,
-  'exceptions.html': `${rescriptBase}/docs/manual/latest/exceptions`,
-  'exceptions/index.html': `${rescriptBase}/docs/manual/latest/exceptions`,
+  'exceptions.html': `${rescriptBase}/docs/manual/latest/exception`,
+  'exceptions/index.html': `${rescriptBase}/docs/manual/latest/exception`,
   'extended-compiler-options.html': `${rescriptBase}/docs/manual/latest/introduction`,
   'extended-compiler-options/index.html': `${rescriptBase}/docs/manual/latest/introduction`,
   'function.html': `${rescriptBase}/docs/manual/latest/function`,
