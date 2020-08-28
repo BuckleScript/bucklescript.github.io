@@ -1,7 +1,7 @@
 let fs = require('fs')
 let childProcess = require('child_process')
 
-let blogPostBase = 'https://reasonml.org/blog'
+let blogPostBase = 'https://rescript-lang.org/blog'
 let rescriptBase = 'https://rescript-lang.org'
 let manualBase = `${rescriptBase}/docs/manual/latest`
 let apiBase = `${rescriptBase}/docs/manual/latest/api`
@@ -115,8 +115,8 @@ let docPages = {
   'return-value-wrapping/index.html': `${rescriptBase}/docs/manual/latest/bind-to-js-function#function-nullable-return-value-wrapping`,
   'roadmap.html': `${rescriptBase}/docs/manual/latest/introduction`,
   'roadmap/index.html': `${rescriptBase}/docs/manual/latest/introduction`,
-  'stdlib-overview.html': `${rescriptBase}/apis/latest`,
-  'stdlib-overview/index.html': `${rescriptBase}/apis/latest`,
+  'stdlib-overview.html': `${apiBase}`,
+  'stdlib-overview/index.html': `${apiBase}`,
   'try.html': `${rescriptBase}/docs/manual/latest/try`,
   'try/index.html': `${rescriptBase}/docs/manual/latest/try`,
   'upgrade-to-v7.html': `${rescriptBase}/docs/manual/latest/introduction`,
